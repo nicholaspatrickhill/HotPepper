@@ -157,7 +157,7 @@ namespace HotPepper
             Beep();
             WriteLine($"\n\n\n\n\n\n\n\t\tThe {pepperChoice.Name} has a scoville heat unit rating of {pepperChoice.SHU}.");
             ForegroundColor = ConsoleColor.Gray;
-            WriteLine("\n\t\tPress any key to return to return and select another pepper.");
+            WriteLine("\n\t\tPress any key to return and select another pepper.");
             ReadKey(true);
             Start();
         }
