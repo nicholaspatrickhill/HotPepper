@@ -14,7 +14,10 @@ namespace HotPepper
             ForegroundColor = ConsoleColor.Gray;
             WriteLine("\n\n\n\n\n\n\n");
             WriteLine("\t\t\t\t\tWelcome to HotPepper...");
-            WriteLine("\t\t\t\t\tPress any key to continue...");
+            Thread.Sleep(1000);
+            WriteLine("\t\t\t\t\tGrab a glass of water...");
+            Thread.Sleep(1000);
+            WriteLine("\n\n\n\t\t\t\t\tPress any key to continue...");
             ReadKey(true);
             Clear();
             Thread.Sleep(500);

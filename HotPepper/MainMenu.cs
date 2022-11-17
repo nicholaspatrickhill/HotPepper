@@ -153,8 +153,9 @@ namespace HotPepper
         private static void PrintPepper(Pepper pepperChoice)
         {
             ForegroundColor = ConsoleColor.Red;
+            Clear();
             Beep();
-            WriteLine($"\n\n\t\tThe {pepperChoice.Name} has a scoville heat unit rating of {pepperChoice.SHU}.");
+            WriteLine($"\n\n\n\n\n\n\n\t\tThe {pepperChoice.Name} has a scoville heat unit rating of {pepperChoice.SHU}.");
             ForegroundColor = ConsoleColor.Gray;
             WriteLine("\n\t\tPress any key to return to return and select another pepper.");
             ReadKey(true);
@@ -176,7 +177,7 @@ namespace HotPepper
                 case 0:
                     Beep();
                     ForegroundColor= ConsoleColor.Gray;
-                    WriteLine("\n\n\n\n\n\t\t\t\tStay spicy...");
+                    WriteLine("\n\n\t\t\t\tStay spicy...");
                     Environment.Exit(0);
                     break;
                 case 1:
