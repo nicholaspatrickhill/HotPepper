@@ -14,7 +14,7 @@ namespace HotPepper
 
         private static void RunMainMenu()
         {
-            string prompt = "\n\t\tUse the UP and DOWN arrow keys to highlight a pepper and press enter.\n\n";
+            string prompt = "\n\t\tUse the UP and DOWN arrow keys to highlight a pepper and press enter.\n\n\n";
             string[] options =
             { 
                 "\t\t\t\t\tBell Pepper",
@@ -158,7 +158,7 @@ namespace HotPepper
             Beep();
             WriteLine($"\n\n\n\n\n\n\n\t\tThe {pepperChoice.Name} has a scoville heat unit rating of {pepperChoice.SHU}.");
             ForegroundColor = ConsoleColor.Gray;
-            WriteLine("\n\t\tPress any key to return and select another pepper.");
+            WriteLine("\n\n\n\t\tPress any key to return and select another pepper.");
             ReadKey(true);
             Thread.Sleep(400);
             Start();
