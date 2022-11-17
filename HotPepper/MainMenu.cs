@@ -31,19 +31,103 @@ namespace HotPepper
                     }
                     break;
                 case 1:
+                    if (peppers.ContainsKey("carolinaReaper"))
+                    {
+                        Pepper pepperChoice = peppers["carolinaReaper"];
+                        PrintPepper(pepperChoice);
+                    }
+                    break;
                 case 2:
+                    if (peppers.ContainsKey("cayenne"))
+                    {
+                        Pepper pepperChoice = peppers["cayenne"];
+                        PrintPepper(pepperChoice);
+                    }
+                    break;
                 case 3:
+                    if (peppers.ContainsKey("fishPepper"))
+                    {
+                        Pepper pepperChoice = peppers["fishPepper"];
+                        PrintPepper(pepperChoice);
+                    }
+                    break;
                 case 4:
+                    if (peppers.ContainsKey("ghostPepper"))
+                    {
+                        Pepper pepperChoice = peppers["ghostPepper"];
+                        PrintPepper(pepperChoice);
+                    }
+                    break;
                 case 5:
+                    if (peppers.ContainsKey("habanero"))
+                    {
+                        Pepper pepperChoice = peppers["habanero"];
+                        PrintPepper(pepperChoice);
+                    }
+                    break;
                 case 6:
+                    if (peppers.ContainsKey("jalapeno"))
+                    {
+                        Pepper pepperChoice = peppers["jalapeno"];
+                        PrintPepper(pepperChoice);
+                    }
+                    break;
                 case 7:
+                    if (peppers.ContainsKey("lemonDrop"))
+                    {
+                        Pepper pepperChoice = peppers["lemonDrop"];
+                        PrintPepper(pepperChoice);
+                    }
+                    break;
                 case 8:
+                    if (peppers.ContainsKey("pepperoncini"))
+                    {
+                        Pepper pepperChoice = peppers["pepperoncini"];
+                        PrintPepper(pepperChoice);
+                    }
+                    break;
                 case 9:
+                    if (peppers.ContainsKey("pepperSpray"))
+                    {
+                        Pepper pepperChoice = peppers["pepperSpray"];
+                        PrintPepper(pepperChoice);
+                    }
+                    break;
                 case 10:
+                    if (peppers.ContainsKey("poblano"))
+                    {
+                        Pepper pepperChoice = peppers["poblano"];
+                        PrintPepper(pepperChoice);
+                    }
+                    break;
                 case 11:
+                    if (peppers.ContainsKey("scotchBonnet"))
+                    {
+                        Pepper pepperChoice = peppers["scotchBonnet"];
+                        PrintPepper(pepperChoice);
+                    }
+                    break;
                 case 12:
+                    if (peppers.ContainsKey("serrano"))
+                    {
+                        Pepper pepperChoice = peppers["serrano"];
+                        PrintPepper(pepperChoice);
+                    }
+                    break;
                 case 13:
+                    if (peppers.ContainsKey("tabasco"))
+                    {
+                        Pepper pepperChoice = peppers["tabasco"];
+                        PrintPepper(pepperChoice);
+                    }
+                    break;
                 case 14:
+                    if (peppers.ContainsKey("trinidadScorpion"))
+                    {
+                        Pepper pepperChoice = peppers["trinidadScorpion"];
+                        PrintPepper(pepperChoice);
+                    }
+                    break;
                 case 15:
                     ExitTheProgram();
                     break;
@@ -54,9 +138,9 @@ namespace HotPepper
         {
             ForegroundColor = ConsoleColor.White;
             WriteLine();
-            WriteLine($"The {pepperChoice.Name} has a scoville rating of {pepperChoice.SHU}.");
+            WriteLine($"The {pepperChoice.Name} has a scoville heat unit rating of {pepperChoice.SHU}.");
             WriteLine();
-            WriteLine("Press any key to return to the menu.");
+            WriteLine("Press any key to return to return and select another pepper.");
             ReadKey(true);
             Start();
         }
@@ -68,7 +152,7 @@ namespace HotPepper
             WriteLine("Are you sure you wish to exit the program?");
             WriteLine("Type \"y\" and press enter to exit or type \"n\" and press enter to return to the Main Menu.");
 
-            ForegroundColor = ConsoleColor.Cyan;
+            ForegroundColor = ConsoleColor.Red;
             string input = ReadLine() ?? String.Empty;
 
             switch (input.ToLower())
