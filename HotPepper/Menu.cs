@@ -5,8 +5,8 @@ namespace HotPepper
     public class Menu
     {
         private int SelectedIndex;
-        private string[] Options;
-        private string Prompt;
+        private readonly string[] Options;
+        private readonly string Prompt;
 
         public Menu(string prompt, string[] options)
         {
