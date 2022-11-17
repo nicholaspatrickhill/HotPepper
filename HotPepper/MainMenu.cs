@@ -9,15 +9,31 @@ namespace HotPepper
         public static void Start()
         {
             var mainMenu = new MainMenu();
-            mainMenu.RunMainMenu();
+            RunMainMenu();
         }
 
-        private void RunMainMenu()
+        private static void RunMainMenu()
         {
-            string prompt = "Use the UP and DOWN arrow keys to highlight the pepper you wish to review and press enter.\n";
-            string[] options = { "Bell Pepper", "Carolina Reaper", "Cayenne", "Fish Pepper", "Ghost Pepper", "Habanero",
-            "Jalapeno", "Lemon Drop", "Pepperoncini", "Pepper Spray", "Poblano", "Scotch Bonnet", "Serrano", "Tabasco", 
-            "Trinidad Scorpion", "\nExit"};
+            string prompt = "\n\t\tUse the UP and DOWN arrow keys to highlight a pepper and press enter.\n\n";
+            string[] options =
+            { 
+                "\t\t\t\t\tBell Pepper",
+                "\t\t\t\t\tCarolina Reaper",
+                "\t\t\t\t\tCayenne",
+                "\t\t\t\t\tFish Pepper",
+                "\t\t\t\t\tGhost Pepper",
+                "\t\t\t\t\tHabanero",
+                "\t\t\t\t\tJalapeno",
+                "\t\t\t\t\tLemon Drop",
+                "\t\t\t\t\tPepperoncini",
+                "\t\t\t\t\tPepper Spray",
+                "\t\t\t\t\tPoblano",
+                "\t\t\t\t\tScotch Bonnet",
+                "\t\t\t\t\tSerrano",
+                "\t\t\t\t\tTabasco",
+                "\t\t\t\t\tTrinidad Scorpion",
+                "\n\t\t\t\t\tExit"
+            };
             Menu mainMenu = new Menu(prompt, options);
             int selectedIndex = mainMenu.Run();
 
@@ -136,39 +152,36 @@ namespace HotPepper
 
         private static void PrintPepper(Pepper pepperChoice)
         {
-            ForegroundColor = ConsoleColor.White;
-            WriteLine();
-            WriteLine($"The {pepperChoice.Name} has a scoville heat unit rating of {pepperChoice.SHU}.");
-            WriteLine();
-            WriteLine("Press any key to return to return and select another pepper.");
+            ForegroundColor = ConsoleColor.Red;
+            Beep();
+            WriteLine($"\n\n\t\tThe {pepperChoice.Name} has a scoville heat unit rating of {pepperChoice.SHU}.");
+            ForegroundColor = ConsoleColor.Gray;
+            WriteLine("\n\t\tPress any key to return to return and select another pepper.");
             ReadKey(true);
             Start();
         }
 
         private static void ExitTheProgram()
         {
-            ForegroundColor = ConsoleColor.White;
-            WriteLine();
-            WriteLine("Are you sure you wish to exit the program?");
-            WriteLine("Type \"y\" and press enter to exit or type \"n\" and press enter to return to the Main Menu.");
+            Thread.Sleep(500);
+            ForegroundColor = ConsoleColor.Gray;
+            string prompt = "\n\n\n\n\n\n\n\t\t\t\tAre you sure you wish to exit the program?";
+            string[] options = { "\n\t\t\t\tyes", "\t\t\t\tno" };
+            
+            Menu exitMenu = new Menu(prompt, options);
+            int selectedIndex = exitMenu.Run();
 
-            ForegroundColor = ConsoleColor.Red;
-            string input = ReadLine() ?? String.Empty;
-
-            switch (input.ToLower())
+            switch (selectedIndex)
             {
-                case "y":
-                    ForegroundColor = ConsoleColor.White;
+                case 0:
+                    Beep();
+                    ForegroundColor= ConsoleColor.Gray;
+                    WriteLine("\n\n\n\n\n\t\t\t\tStay spicy...");
                     Environment.Exit(0);
                     break;
-                case "n":
+                case 1:
+                    Beep();
                     Start();
-                    break;
-                default:
-                    ForegroundColor = ConsoleColor.White;
-                    WriteLine();
-                    WriteLine("Invalid Command. Please try again.");
-                    ExitTheProgram();
                     break;
             }
         }

@@ -17,9 +17,6 @@ namespace HotPepper
 
         private void DisplayOptions()
         {
-            ForegroundColor = ConsoleColor.White;
-
-            //ConsoleMessages.PrintAppHeader();
             WriteLine(Prompt);
             for (int i = 0; i < Options.Length; i++)
             {
