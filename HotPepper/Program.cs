@@ -7,7 +7,7 @@ namespace HotPepper
         static void Main(string[] args)
         {
             Title = "Hot Pepper!";
-            //MainMenu.Start();
+            MainMenu.Start();
         }
     }
 }
