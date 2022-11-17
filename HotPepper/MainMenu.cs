@@ -26,7 +26,7 @@ namespace HotPepper
                 "\t\t\t\t\tJalapeno",
                 "\t\t\t\t\tLemon Drop",
                 "\t\t\t\t\tPepperoncini",
-                "\t\t\t\t\tPepper Spray",
+                "\t\t\t\t\tSelf-Defense Pepper Spray",
                 "\t\t\t\t\tPoblano",
                 "\t\t\t\t\tScotch Bonnet",
                 "\t\t\t\t\tSerrano",
