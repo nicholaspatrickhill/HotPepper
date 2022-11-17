@@ -152,6 +152,7 @@ namespace HotPepper
 
         private static void PrintPepper(Pepper pepperChoice)
         {
+            Thread.Sleep(300);
             ForegroundColor = ConsoleColor.Red;
             Clear();
             Beep();
@@ -159,12 +160,13 @@ namespace HotPepper
             ForegroundColor = ConsoleColor.Gray;
             WriteLine("\n\t\tPress any key to return and select another pepper.");
             ReadKey(true);
+            Thread.Sleep(400);
             Start();
         }
 
         private static void ExitTheProgram()
         {
-            Thread.Sleep(500);
+            Thread.Sleep(300);
             ForegroundColor = ConsoleColor.Gray;
             string prompt = "\n\n\n\n\n\n\n\t\t\t\tAre you sure you wish to exit the program?";
             string[] options = { "\n\t\t\t\tyes", "\t\t\t\tno" };
@@ -177,11 +179,13 @@ namespace HotPepper
                 case 0:
                     Beep();
                     ForegroundColor= ConsoleColor.Gray;
-                    WriteLine("\n\n\t\t\t\tStay spicy...");
+                    Thread.Sleep(300);
+                    WriteLine("\n\n\t\t\t\tStay spicy...\n\n\n\n\n\n\n\n\n\n\n\n\n");
                     Environment.Exit(0);
                     break;
                 case 1:
                     Beep();
+                    Thread.Sleep(300);
                     Start();
                     break;
             }
