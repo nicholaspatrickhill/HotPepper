@@ -1,4 +1,5 @@
-﻿using static System.Console;
+﻿using static HotPepper.PepperRepo;
+using static System.Console;
 
 
 namespace HotPepper
@@ -13,16 +14,21 @@ namespace HotPepper
 
         private void RunMainMenu()
         {
-            string prompt = "Use the UP and DOWN arrow keys to highlight the pepper you with to review and press enter.\n";
-            string[] options = { "Bell Pepper", "Carolina Reaper", "Fatalii", "Fish Pepper", "Ghost Pepper", "Habanero",
-            "Jalapeno", "Lemon Drop", "Poblano", "Scotch Bonnet", "Serrano", "Tabasco", "Trinidad Scorpion", "Exit"};
+            string prompt = "Use the UP and DOWN arrow keys to highlight the pepper you wish to review and press enter.\n";
+            string[] options = { "Bell Pepper", "Carolina Reaper", "Cayenne", "Fish Pepper", "Ghost Pepper", "Habanero",
+            "Jalapeno", "Lemon Drop", "Pepperoncini", "Pepper Spray", "Poblano", "Scotch Bonnet", "Serrano", "Tabasco", 
+            "Trinidad Scorpion", "\nExit"};
             Menu mainMenu = new Menu(prompt, options);
             int selectedIndex = mainMenu.Run();
 
             switch (selectedIndex)
             {
                 case 0:
-                   
+                    if (peppers.ContainsKey("bellPepper"))
+                    {
+                        Pepper pepperChoice = peppers["bellPepper"];
+                        PrintPepper(pepperChoice);
+                    }
                     break;
                 case 1:
                 case 2:
@@ -37,12 +43,23 @@ namespace HotPepper
                 case 11:
                 case 12:
                 case 13:
+                case 14:
+                case 15:
                     ExitTheProgram();
                     break;
             }
         }
 
-
+        private static void PrintPepper(Pepper pepperChoice)
+        {
+            ForegroundColor = ConsoleColor.White;
+            WriteLine();
+            WriteLine($"The {pepperChoice.Name} has a scoville rating of {pepperChoice.SHU}.");
+            WriteLine();
+            WriteLine("Press any key to return to the menu.");
+            ReadKey(true);
+            Start();
+        }
 
         private static void ExitTheProgram()
         {
