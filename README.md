@@ -9,7 +9,7 @@ Upon user response, the Start method is called from the MainMenu class.
 **MAIN MENU:** RunMainMenu generates an arrow-key driven menu in the console.
 The menu's functionality and design are established in the Menu class.
 RunMainMenu prompts the user to move the cursor with the up and down arrow keys on their keyboard to select a pepper and press enter.
-The user's input exectures cases in a switch that call methods to display the Scoville Heat Unit rating of their selected pepper.
+The user's input executes cases in a switch that call methods to display the Scoville Heat Unit rating of their selected pepper.
 
 **DICTIONARIES & OBJECTS:** The Pepper class establishes the properties that are shared by the various hot peppers.
 The hot peppers are instantiated as objects within the peppers dictionary in the PepperRepo class.
@@ -25,7 +25,7 @@ Selecting "no" calls the Start method to return the user to the home menu.
 
 **DESIGN ELEMENTS** The application uses tabs and newlines in the WriteLine methods to for clarity and aesthetics.
 Thread.Sleep is called by the splash screen and each time a new screen is generated for a dynamic user experience.
-Console.Beep is used to provide the user with audible feedback each time that the make a selection.
+Console.Beep is used to provide the user with audible feedback each time that they make a selection.
 
 #### INSTRUCTIONS
 Press any key on the splash screen to begin the program.
