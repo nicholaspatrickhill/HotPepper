@@ -23,7 +23,7 @@ The user's input executes cases in a switch.
 Selecting "yes" calls an exit method to terminate the program.
 Selecting "no" calls the Start method to return the user to the home menu.
 
-**DESIGN ELEMENTS** The application uses tabs and newlines in the WriteLine methods to for clarity and aesthetics.
+**DESIGN ELEMENTS** The application uses tabs and newlines in the WriteLine methods for clarity and aesthetics.
 Thread.Sleep is called by the splash screen and each time a new screen is generated for a dynamic user experience.
 Console.Beep is used to provide the user with audible feedback each time that they make a selection.
 
